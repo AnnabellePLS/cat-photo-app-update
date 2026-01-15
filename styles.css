@@ -1,0 +1,137 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: lightblue;
+    color: gray;
+}
+.sticky-banner {
+  position: sticky; 
+  top: 0;          
+  left: 0;
+  width: 100%;     
+  z-index: 1000;    
+}
+/* 2. Navigation */
+nav {
+    background: #333;
+    color: #fff;
+    padding: 0.5rem 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flow-root;
+}
+
+nav li {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+nav li:hover {
+    background: #555;
+}
+
+/* 3. Layout Containers */
+.page {
+    max-width: 780px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* 4. Weather Summary Section */
+.archive {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: lightblue;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.summary {
+    flex: 1;
+    min-width: 300px;
+}
+
+.article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* 5. 5-Day Forecast Grid */
+.flex {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.flex-col {
+    background: #e2e2e2;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1;
+    min-width: 120px;
+}
+
+.flex-col img {
+    width: 50px;
+    display: block;
+    margin: 10px auto;
+}
+
+/* 6. News Section */
+.news-section .archive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 20px;
+}
+
+.article {
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* 7. Forms & Inputs */
+input[type="number"], 
+input[type="text"], 
+input[type="file"] {
+    display: block;
+    margin: 10px 0;
+    padding: 5px;
+    width: 98%;
+}
+
+/* 8. Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 40px;
+}
+
+footer a {
+    color: green;
+    text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .flex {
+        flex-direction: column;
+    }
+    
+    nav li {
+        display: block;
+        float: none !important;
+    }
+}

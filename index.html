@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--news/weather-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/>
+    <title>My Weather App</title>
+</head>
+<body>
+      <header></header> <div class="sticky-banner">
+
+        <nav><ul><li>Home</li><li>News</li><li>Weather</li><li style="float: right">About</li></ul></nav>
+             </div> 
+    <section class="weather-section">
+        <div class="page">
+          <h1 style="text-align: center;">LATEST WEATHER</h1>
+          <div class="archive">
+            <article class="article">
+              <section id="stats">
+                <div class="summary">
+                  <h2>Weather summary</h2>
+                  <h3 id="five-city"></h3>
+                  <p>Currently:46°F <span id="current-desc"></span></p>
+                  <p>
+                    Tempature:
+                    <span id="current-temp"></span> 46°F
+                  </p>
+                  <p>Wind Chill: <span id="current-windChill"></span> 42°F</p>
+                  <p>Humidity: <span id="current-humid"></span>42%</p>
+                  <p>Wind Speed: <span id="current-windSpeed"></span> 9 mph</p>
+                </div>
+              </section>
+              <div>
+                <!-- online image below -->
+                <img src="https://t4.ftcdn.net/jpg/02/66/38/15/360_F_266381525_alVrbw15u5EjhIpoqqa1eI5ghSf7hpz7.jpg" alt="Random Image" />
+              </div>
+    
+              </div>
+            </article>
+
+            <!-- 5 day forecast -->
+            <div class="article-five-day">
+              <article id="forecastContainer">
+                <h2 style="text-align: center;" id="forecastTitle">5 Day Forecast</h2>
+                <h3 id="city"></h3>
+                <div class="flex">
+
+  <main>
+    <div class="flex-col"><strong>Wednesday</strong><div> </div> <span id="dayTitle1" class="col-head">Sunny<div></div><img src="Sunny.jpg" class="Sunny.jpg"/> <span class="temp-data1"> <span id="data1"></span><span><div></div>47°F</span></div>
+   <p></p>
+    <div class="flex-col"><strong>Thursday</strong> <div></div><span id="dayTitle2" class="col-head">Snowy<div></div><img src="snowy.jpg" class="snowy.jpg"/> <span class="temp-data2"> <span id="data2"></span><span><div></div>43°F</span></div>
+    <p></p>
+    <div class="flex-col"><strong>Friday</strong> <div></div><span id="dayTitle3" class="col-head">Snowy<div></div><img src="snowy.jpg" class="snowy.jpg"/> <span class="temp-data3"> <span id="data3"></span><span><div></div>30°F</span></div>
+    <p></p>
+    <div class="flex-col"><strong>Saturday</strong><div></div><span id="dayTitle4" class="col-head">Cloudy<div></div><img src="partlyCloudy.jpg" class="partlyCloudy.jpg"/> <span class="temp-data4"> <span id="data4"></span><span><div></div>29°F</span></div>
+    <p></p>
+    <div class="flex-col"><strong>Sunday</strong><div></div><span id="dayTitle5" class="col-head">Cloudy<div></div><img src="partlyCloudy.jpg" class="partlyCloudy.jpg"/> <span class="temp-data5"> <span id="data5"></span><span><div></div>32°F</span></div>
+    <p></p>
+    <p></p>
+    <p></p>
+    <!--news section-->
+   <section class="news-section">
+    <div class="page">
+      <h1 style="text-align: center;">LATEST NEWS</h1>
+      <div class="archive">
+        
+        <!-- Header Article -->
+        <article class="article">
+          <img id="kitten_header" src="kitten_header.jpg" alt="Tuxedo cat swatting a flower" />
+          <h2>
+            <a id="header-article-link" href="#header">Tuxedo Cat Swats Flower</a>
+          </h2>
+          <p id="header-desc">A playful moment in the garden.</p>
+        </article>
+
+        <!-- Article 1: Cat Count Survey -->
+        <article class="article">
+          <img id="article-img-1" src="pexels-photo-416160.jpeg" alt="A fluffy cat sitting" />
+          <h3>
+            <a id="article-link-1" href="#survey">How Many Cats Do You Have?</a>
+          </h3>
+          <p id="article-desc-1">Taking account of the number of cats.</p>
+          <label for="cats">Number of cats (1-100):</label>
+          <input type="number" id="cats" name="cats" min="1" max="100" />
+        </article>
+
+        <!-- Article 2: Photo Submission -->
+        <article class="article">
+          <img id="article-img-2" src="pexels-photo-416160.jpeg" alt="Upload portal preview" />
+          <h3>
+            <a id="article-link-2" href="#upload">Share Your Cat Photos</a>
+          </h3>
+          <p id="article-desc-2">(Can I see your cats plz?)</p>
+          <label for="avatar">Upload photo of cats:</label>
+          <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+        </article>
+
+        <!-- Article 3: Names Entry -->
+        <article class="article">
+          <img id="article-img-3" src="pexels-photo-416160.jpeg" alt="Cat name submission form" />
+          <h3>
+            <a id="article-link-3" href="#names">Names?</a>
+          </h3>
+          <p id="article-desc-3">What are your cat(s) names?</p>
+          <label for="name">Name(s):</label>
+          <input type="text" id="name" name="name" required minlength="2" maxlength="200" size="10" />
+        </article>
+
+        <!-- Article 4: Thank You Note -->
+        <article class="article">
+          <img id="article-img-4" src="pexels-photo-416160.jpeg" alt="Thank you image" />
+          <h3>
+            <a id="article-link-4" href="#thanks">Thank you for participating!</a>
+          </h3>
+          <p id="article-desc-4">Have A Nice Day!</p>
+        </article>
+
+      </div> <!-- .archive -->
+    </div> <!-- .page -->
+  </section> <!-- .news-section -->
+  <footer>
+        <p>
+            &copy; 2026| Annabelle Sligting | <a href="#">Tooele Technical College</a>
+            <br>
+            Last Updated: 1/7/26        </p>
+    </footer>
+</body>
+</html>
