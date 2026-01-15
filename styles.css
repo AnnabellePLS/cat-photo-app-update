@@ -1,137 +1,99 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background-color: lightblue;
-    color: gray;
-}
-.sticky-banner {
-  position: sticky; 
-  top: 0;          
-  left: 0;
-  width: 100%;     
-  z-index: 1000;    
-}
-/* 2. Navigation */
-nav {
-    background: #333;
-    color: #fff;
-    padding: 0.5rem 2rem;
+/* Base Styles */
+body { 
+    background: rgb(197, 190, 190); 
+    color: #111; 
+    padding: 4em; 
+    font-family: sans-serif; 
+    line-height: 1.15; 
 }
 
-nav ul {
-    list-style: none;
-    display: flow-root;
+a { color: #111; }
+
+/* Navigation */
+ul { 
+    max-width: 100%; 
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+    overflow: hidden; 
+    background-color: #cecece; 
 }
 
-nav li {
-    display: inline-block;
-    padding: 10px 20px;
-    cursor: pointer;
+li { float: left; }
+
+li a {
+    display: block; 
+    color: #333; 
+    text-align: center; 
+    padding: 14px 16px; 
+    text-decoration: none; 
 }
 
-nav li:hover {
-    background: #555;
+li a:hover:not(.active) { 
+    background-color: #111; 
+    color: white; /* Added for better visibility on hover */
 }
 
-/* 3. Layout Containers */
-.page {
-    max-width: 780px;
-    margin: 20px auto;
-    padding: 0 20px;
+.active { background-color: #048caa; color: white; }
+
+/* News Section */
+.page { 
+    padding: 2em; 
+    background: #cecece; 
+    max-width: 100%; 
 }
 
-/* 4. Weather Summary Section */
-.archive {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    background: lightblue;
-    padding: 10px;
-    border-radius: 8px;
-    margin-bottom: 20px;
+.hr { height: 6px; border: none; }
+
+.archive { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+    grid-gap: 1em; 
+    grid-auto-flow: dense; 
 }
 
-.summary {
-    flex: 1;
-    min-width: 300px;
+.article { 
+    text-align: center; 
+    padding: 1em; 
+    background: rgba(200, 200, 255, 0.3); 
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1), 0 20px 20px rgba(0,0,0,0.05); 
 }
 
-.article img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+.article img { max-width: 100%; height: auto; }
+
+/* Featured Article (Full Width) */
+.article:nth-child(1) { 
+    grid-column: 1 / -1; 
 }
 
-/* 5. 5-Day Forecast Grid */
-.flex {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
+.article:nth-child(8) { 
+    grid-column: span 2; 
+    background: rgba(255, 200, 255, 0.3); 
 }
 
-.flex-col {
-    background: #e2e2e2;
-    padding: 15px;
-    border-radius: 5px;
-    text-align: center;
-    flex: 1;
-    min-width: 120px;
+/* Weather Section */
+.article-five-day { 
+    grid-column: 1 / -1; 
+    padding: 15px; 
+    margin-top: 15px; 
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1), 0 20px 20px rgba(0,0,0,0.05); 
+    background-color: rgba(200, 200, 255, 0.3); 
 }
 
-.flex-col img {
-    width: 50px;
-    display: block;
-    margin: 10px auto;
-}
+.flex { display: flex; justify-content: center; flex-wrap: wrap; }
+.flex-col { text-align: center; margin: 10px; }
 
-/* 6. News Section */
-.news-section .archive {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 20px;
-}
+#city, #forecastTitle { text-align: center; }
 
-.article {
-    background: #fff;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
+footer { text-align: center; margin-top: 2em; }
 
-/* 7. Forms & Inputs */
-input[type="number"], 
-input[type="text"], 
-input[type="file"] {
-    display: block;
-    margin: 10px 0;
-    padding: 5px;
-    width: 98%;
-}
-
-/* 8. Footer */
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: 40px;
-}
-
-footer a {
-    color: green;
-    text-decoration: none;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .flex {
-        flex-direction: column;
+/* Responsive Fix: Added missing curly braces */
+@media (max-width: 680px) {
+    .archive { 
+        display: flex; 
+        flex-direction: column; 
     }
-    
-    nav li {
-        display: block;
-        float: none !important;
+    .article { 
+        margin-bottom: 1em; 
     }
 }
